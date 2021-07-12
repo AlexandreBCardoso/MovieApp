@@ -64,15 +64,17 @@ extension CardMovieScreen: CodeView {
 	}
 	
 	func setupConstraints() {
-		collectionView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-		collectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-		collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-		collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-		
-		spinner.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
-		spinner.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
-		spinner.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
-		spinner.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
+		NSLayoutConstraint.activate([
+			collectionView.topAnchor.constraint(equalTo: topAnchor),
+			collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+			collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+			collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+			
+			spinner.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+			spinner.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+			spinner.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+			spinner.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+		])
 	}
 	
 	func setupAdditionalConfiguration() {

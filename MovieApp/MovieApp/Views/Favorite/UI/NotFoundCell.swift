@@ -62,21 +62,23 @@ extension NotFoundCell: CodeView {
 	}
 	
 	func setupConstraints() {
-		viewScreen.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-		viewScreen.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-		viewScreen.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-		viewScreen.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-		
-		errorImageView.topAnchor.constraint(equalTo: viewScreen.topAnchor, constant: 30).isActive = true
-		errorImageView.centerXAnchor.constraint(equalTo: viewScreen.centerXAnchor).isActive = true
-		errorImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-		errorImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-		
-		titleLabel.topAnchor.constraint(equalTo: errorImageView.bottomAnchor, constant: 20).isActive = true
-		titleLabel.centerXAnchor.constraint(equalTo: viewScreen.centerXAnchor).isActive = true
-		titleLabel.leadingAnchor.constraint(equalTo: viewScreen.leadingAnchor, constant: 30).isActive = true
-		titleLabel.trailingAnchor.constraint(equalTo: viewScreen.trailingAnchor, constant: -30).isActive = true
-		titleLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
+		NSLayoutConstraint.activate([
+			viewScreen.topAnchor.constraint(equalTo: contentView.topAnchor),
+			viewScreen.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+			viewScreen.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+			viewScreen.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+			
+			errorImageView.topAnchor.constraint(equalTo: viewScreen.topAnchor, constant: 30),
+			errorImageView.centerXAnchor.constraint(equalTo: viewScreen.centerXAnchor),
+			errorImageView.heightAnchor.constraint(equalToConstant: 100),
+			errorImageView.widthAnchor.constraint(equalToConstant: 100),
+			
+			titleLabel.topAnchor.constraint(equalTo: errorImageView.bottomAnchor, constant: 20),
+			titleLabel.centerXAnchor.constraint(equalTo: viewScreen.centerXAnchor),
+			titleLabel.leadingAnchor.constraint(equalTo: viewScreen.leadingAnchor, constant: 30),
+			titleLabel.trailingAnchor.constraint(equalTo: viewScreen.trailingAnchor, constant: -30),
+			titleLabel.heightAnchor.constraint(equalToConstant: 25)
+		])
 	}
 	
 	func setupAdditionalConfiguration() {

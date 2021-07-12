@@ -98,30 +98,32 @@ extension FavoriteCell: CodeView {
 	}
 	
 	func setupConstraints() {
-		viewCell.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-		viewCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-		viewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-		viewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -2).isActive = true
-		
-		movieImageView.topAnchor.constraint(equalTo: viewCell.topAnchor).isActive = true
-		movieImageView.leadingAnchor.constraint(equalTo: viewCell.leadingAnchor).isActive = true
-		movieImageView.bottomAnchor.constraint(equalTo: viewCell.bottomAnchor).isActive = true
-		movieImageView.widthAnchor.constraint(equalTo: viewCell.widthAnchor, multiplier: 0.35).isActive = true
-		
-		titleLabel.topAnchor.constraint(equalTo: viewCell.topAnchor, constant: 10).isActive = true
-		titleLabel.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 10).isActive = true
-		titleLabel.trailingAnchor.constraint(equalTo: yearLabel.leadingAnchor, constant: -10).isActive = true
-		titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-		
-		yearLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor).isActive = true
-		yearLabel.trailingAnchor.constraint(equalTo: viewCell.trailingAnchor, constant: -15).isActive = true
-		yearLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
-		yearLabel.widthAnchor.constraint(equalToConstant: 40).isActive = true
-		
-		summaryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
-		summaryLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
-		summaryLabel.trailingAnchor.constraint(equalTo: yearLabel.trailingAnchor).isActive = true
-		summaryLabel.bottomAnchor.constraint(equalTo: viewCell.bottomAnchor, constant: -7).isActive = true
+		NSLayoutConstraint.activate([
+			viewCell.topAnchor.constraint(equalTo: contentView.topAnchor),
+			viewCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+			viewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+			viewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -2),
+			
+			movieImageView.topAnchor.constraint(equalTo: viewCell.topAnchor),
+			movieImageView.leadingAnchor.constraint(equalTo: viewCell.leadingAnchor),
+			movieImageView.bottomAnchor.constraint(equalTo: viewCell.bottomAnchor),
+			movieImageView.widthAnchor.constraint(equalTo: viewCell.widthAnchor, multiplier: 0.35),
+			
+			titleLabel.topAnchor.constraint(equalTo: viewCell.topAnchor, constant: 10),
+			titleLabel.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 10),
+			titleLabel.trailingAnchor.constraint(equalTo: yearLabel.leadingAnchor, constant: -10),
+			titleLabel.heightAnchor.constraint(equalToConstant: 20),
+			
+			yearLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor),
+			yearLabel.trailingAnchor.constraint(equalTo: viewCell.trailingAnchor, constant: -15),
+			yearLabel.heightAnchor.constraint(equalToConstant: 20),
+			yearLabel.widthAnchor.constraint(equalToConstant: 40),
+			
+			summaryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+			summaryLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+			summaryLabel.trailingAnchor.constraint(equalTo: yearLabel.trailingAnchor),
+			summaryLabel.bottomAnchor.constraint(equalTo: viewCell.bottomAnchor, constant: -7)
+		])
 	}
 	
 	func setupAdditionalConfiguration() {

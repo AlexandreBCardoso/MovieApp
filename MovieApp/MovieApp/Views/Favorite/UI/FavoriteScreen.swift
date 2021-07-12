@@ -49,11 +49,13 @@ extension FavoriteScreen: CodeView {
 	}
 	
 	func setupConstraints() {
-		tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
-		tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor).isActive = true
-		tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor).isActive = true
-		tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor).isActive = true
- 	}
+		NSLayoutConstraint.activate([
+			tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+			tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+			tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+			tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+		])
+	}
 	
 	func setupAdditionalConfiguration() {
 		backgroundColor = .white

@@ -87,25 +87,27 @@ extension MovieCell: CodeView {
 	}
 	
 	func setupConstraints() {
-		viewCell.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-		viewCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
-		viewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-		viewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-		
-		movieImageView.topAnchor.constraint(equalTo: viewCell.topAnchor).isActive = true
-		movieImageView.leadingAnchor.constraint(equalTo: viewCell.leadingAnchor).isActive = true
-		movieImageView.trailingAnchor.constraint(equalTo: viewCell.trailingAnchor).isActive = true
-		movieImageView.heightAnchor.constraint(equalTo: viewCell.heightAnchor, multiplier: 0.8).isActive = true
-		
-		titleLabel.topAnchor.constraint(equalTo: movieImageView.bottomAnchor, constant: 5).isActive = true
-		titleLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor, constant: 5).isActive = true
-		titleLabel.trailingAnchor.constraint(equalTo: favoriteImageView.leadingAnchor, constant: -10).isActive = true
-		titleLabel.bottomAnchor.constraint(equalTo: viewCell.bottomAnchor, constant: -5).isActive = true
-		
-		favoriteImageView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor).isActive = true
-		favoriteImageView.trailingAnchor.constraint(equalTo: viewCell.trailingAnchor, constant: -10).isActive = true
-		favoriteImageView.heightAnchor.constraint(equalToConstant: 17).isActive = true
-		favoriteImageView.widthAnchor.constraint(equalToConstant: 17).isActive = true
+		NSLayoutConstraint.activate([
+			viewCell.topAnchor.constraint(equalTo: contentView.topAnchor),
+			viewCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+			viewCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+			viewCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+			
+			movieImageView.topAnchor.constraint(equalTo: viewCell.topAnchor),
+			movieImageView.leadingAnchor.constraint(equalTo: viewCell.leadingAnchor),
+			movieImageView.trailingAnchor.constraint(equalTo: viewCell.trailingAnchor),
+			movieImageView.heightAnchor.constraint(equalTo: viewCell.heightAnchor, multiplier: 0.8),
+			
+			titleLabel.topAnchor.constraint(equalTo: movieImageView.bottomAnchor, constant: 5),
+			titleLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor, constant: 5),
+			titleLabel.trailingAnchor.constraint(equalTo: favoriteImageView.leadingAnchor, constant: -10),
+			titleLabel.bottomAnchor.constraint(equalTo: viewCell.bottomAnchor, constant: -5),
+			
+			favoriteImageView.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
+			favoriteImageView.trailingAnchor.constraint(equalTo: viewCell.trailingAnchor, constant: -10),
+			favoriteImageView.heightAnchor.constraint(equalToConstant: 17),
+			favoriteImageView.widthAnchor.constraint(equalToConstant: 17)
+		])
 	}
 	
 	func setupAdditionalConfiguration() {

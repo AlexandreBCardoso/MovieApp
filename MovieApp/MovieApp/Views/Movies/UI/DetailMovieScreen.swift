@@ -110,35 +110,37 @@ extension DetailMovieScreen: CodeView {
 	}
 	
 	func setupConstraints() {
-		movieImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-		movieImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-		movieImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-		movieImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4).isActive = true
-		
-		favoriteButtom.topAnchor.constraint(equalTo: movieImageView.bottomAnchor, constant: 10).isActive = true
-		favoriteButtom.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor).isActive = true
-		favoriteButtom.heightAnchor.constraint(equalToConstant: 30).isActive = true
-		favoriteButtom.widthAnchor.constraint(equalToConstant: 30).isActive = true
-		
-		titleLabel.topAnchor.constraint(equalTo: favoriteButtom.topAnchor).isActive = true
-		titleLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor).isActive = true
-		titleLabel.trailingAnchor.constraint(equalTo: favoriteButtom.leadingAnchor, constant: -10).isActive = true
-		titleLabel.bottomAnchor.constraint(equalTo: favoriteButtom.bottomAnchor).isActive = true
-		
-		yearLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true
-		yearLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor).isActive = true
-		yearLabel.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor).isActive = true
-		yearLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-		
-		genreLabel.topAnchor.constraint(equalTo: yearLabel.bottomAnchor, constant: 5).isActive = true
-		genreLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor).isActive = true
-		genreLabel.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor).isActive = true
-		genreLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-		
-		summaryLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor, constant: 5).isActive = true
-		summaryLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor).isActive = true
-		summaryLabel.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor).isActive = true
-		summaryLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -30).isActive = true
+		NSLayoutConstraint.activate([
+			movieImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+			movieImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+			movieImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+			movieImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4),
+			
+			favoriteButtom.topAnchor.constraint(equalTo: movieImageView.bottomAnchor, constant: 10),
+			favoriteButtom.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor),
+			favoriteButtom.heightAnchor.constraint(equalToConstant: 30),
+			favoriteButtom.widthAnchor.constraint(equalToConstant: 30),
+			
+			titleLabel.topAnchor.constraint(equalTo: favoriteButtom.topAnchor),
+			titleLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor),
+			titleLabel.trailingAnchor.constraint(equalTo: favoriteButtom.leadingAnchor, constant: -10),
+			titleLabel.bottomAnchor.constraint(equalTo: favoriteButtom.bottomAnchor),
+			
+			yearLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+			yearLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor),
+			yearLabel.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor),
+			yearLabel.heightAnchor.constraint(equalToConstant: 30),
+			
+			genreLabel.topAnchor.constraint(equalTo: yearLabel.bottomAnchor, constant: 5),
+			genreLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor),
+			genreLabel.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor),
+			genreLabel.heightAnchor.constraint(equalToConstant: 30),
+			
+			summaryLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor, constant: 5),
+			summaryLabel.leadingAnchor.constraint(equalTo: movieImageView.leadingAnchor),
+			summaryLabel.trailingAnchor.constraint(equalTo: movieImageView.trailingAnchor),
+			summaryLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -30)
+		])
 	}
 	
 	func setupAdditionalConfiguration() {
