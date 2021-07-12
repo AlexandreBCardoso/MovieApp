@@ -14,36 +14,32 @@ final class MovieCell: UICollectionViewCell {
 	
 	// MARK: - Element UI
 	lazy var viewCell: UIView = {
-		let view = UIView(frame: .zero)
+		let view = UIView.usingAutoLayout()
 		view.backgroundColor = UIColor(named: "backColor")
-		view.translatesAutoresizingMaskIntoConstraints = false
 		return view
 	}()
 	
 	lazy var movieImageView: CustomImageView = {
-		let imageView = CustomImageView(frame: .zero)
+		let imageView = CustomImageView.usingAutoLayout()
 		imageView.backgroundColor = .gray
 		imageView.contentMode = .scaleToFill
 		imageView.clipsToBounds = true
-		imageView.translatesAutoresizingMaskIntoConstraints = false
 		return imageView
 	}()
 	
 	lazy var titleLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.numberOfLines = 1
 		label.textColor = UIColor(named: "secondColor")
 		label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
 		label.textAlignment = .center
 		label.adjustsFontSizeToFitWidth = true
 		label.minimumScaleFactor = 0.7
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
 	lazy var favoriteImageView: UIImageView = {
-		let imageView = UIImageView(frame: .zero)
-		imageView.translatesAutoresizingMaskIntoConstraints = false
+		let imageView = UIImageView.usingAutoLayout()
 		return imageView
 	}()
 	

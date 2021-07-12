@@ -14,26 +14,23 @@ class NotFoundCell: UITableViewCell {
 	
 	// MARK: - Element UI
 	lazy var viewScreen: UIView = {
-		let view = UIView(frame: .zero)
-		view.translatesAutoresizingMaskIntoConstraints = false
+		let view = UIView.usingAutoLayout()
 		return view
 	}()
 	
 	lazy var errorImageView: UIImageView = {
-		let imageView = UIImageView(frame: .zero)
+		let imageView = UIImageView.usingAutoLayout()
 		imageView.image = UIImage(named: "error")
-		imageView.translatesAutoresizingMaskIntoConstraints = false
 		return imageView
 	}()
 	
 	lazy var titleLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.numberOfLines = 0
 		label.text = "Nenhum filme favoritado!"
 		label.textAlignment = .center
 		label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
 		label.textColor = UIColor(named: "backColor")
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	

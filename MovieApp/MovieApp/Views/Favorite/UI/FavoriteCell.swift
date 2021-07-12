@@ -14,44 +14,39 @@ final class FavoriteCell: UITableViewCell {
 	
 	// MARK: - Element UI
 	lazy var viewCell: UIView = {
-		let view = UIView(frame: .zero)
+		let view = UIView.usingAutoLayout()
 		view.backgroundColor = .systemGray
-		view.translatesAutoresizingMaskIntoConstraints = false
 		return view
 	}()
 	
 	lazy var movieImageView: CustomImageView = {
-		let imageView = CustomImageView(frame: .zero)
+		let imageView = CustomImageView.usingAutoLayout()
 		imageView.backgroundColor = .gray
 		imageView.contentMode = .scaleAspectFill
 		imageView.clipsToBounds = true
-		imageView.translatesAutoresizingMaskIntoConstraints = false
 		return imageView
 	}()
 	
 	lazy var titleLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
 		label.textColor = UIColor(named: "backColor")
 		label.adjustsFontSizeToFitWidth = true
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
 	lazy var yearLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
 		label.textColor = UIColor(named: "backColor")
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
 	lazy var summaryLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.numberOfLines = 0
 		label.font = UIFont.systemFont(ofSize: 15, weight: .light)
 		label.textColor = UIColor(named: "backColor")
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	

@@ -24,10 +24,9 @@ final class CardMovieScreen: UIView {
 	}()
 	
 	lazy var spinner: UIActivityIndicatorView = {
-		let spinner = UIActivityIndicatorView()
+		let spinner = UIActivityIndicatorView.usingAutoLayout()
 		spinner.style = .large
 		spinner.backgroundColor = .systemGray
-		spinner.translatesAutoresizingMaskIntoConstraints = false
 		return spinner
 	}()
 	

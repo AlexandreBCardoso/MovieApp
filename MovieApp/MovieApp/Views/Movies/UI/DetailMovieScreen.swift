@@ -15,49 +15,43 @@ final class DetailMovieScreen: UIView {
 	
 	// MARK: - Element UI
 	lazy var movieImageView: CustomImageView = {
-		let imageView = CustomImageView(frame: .zero)
+		let imageView = CustomImageView.usingAutoLayout()
 		imageView.backgroundColor = .gray
 		imageView.contentMode = .scaleToFill
 		imageView.clipsToBounds = true
-		imageView.translatesAutoresizingMaskIntoConstraints = false
 		return imageView
 	}()
 	
 	lazy var titleLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
 	lazy var favoriteButtom: UIButton = {
-		let button = UIButton(frame: .zero)
+		let button = UIButton.usingAutoLayout()
 		button.addTarget(self, action: #selector(changeFavorite(_:)), for: .touchUpInside)
 		button.contentHorizontalAlignment = .fill
 		button.contentVerticalAlignment = .fill
-		button.translatesAutoresizingMaskIntoConstraints = false
 		return button
 	}()
 	
 	lazy var yearLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
 	lazy var genreLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
 	lazy var summaryLabel: UILabel = {
-		let label = UILabel(frame: .zero)
+		let label = UILabel.usingAutoLayout()
 		label.numberOfLines = 0
 		label.font = UIFont.systemFont(ofSize: 17, weight: .regular)
-		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	

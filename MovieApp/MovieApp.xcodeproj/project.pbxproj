@@ -43,6 +43,7 @@
 		BC9AD4CF2696865F00A4CBFE /* ServiceLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AD4CE2696865F00A4CBFE /* ServiceLocalRepository.swift */; };
 		BC9AD4D72696877D00A4CBFE /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AD4D62696877D00A4CBFE /* CoreDataRepository.swift */; };
 		BC9AD4DC26968D8D00A4CBFE /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AD4DB26968D8D00A4CBFE /* FavoriteModel.swift */; };
+		BCB8D50C269D097F008F9552 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB8D50B269D097E008F9552 /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		BC9AD4CE2696865F00A4CBFE /* ServiceLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocalRepository.swift; sourceTree = "<group>"; };
 		BC9AD4D62696877D00A4CBFE /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		BC9AD4DB26968D8D00A4CBFE /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
+		BCB8D50B269D097E008F9552 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		D830F1537343E6037B2F5CAC /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE7CABAE3B8EA5CA1AD30D4 /* Pods_MovieAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -201,6 +203,7 @@
 			children = (
 				BC3E5A6E268D2D2400CFE82E /* CodeView.swift */,
 				BC618DD626953C31002BC360 /* CustomImageView.swift */,
+				BCB8D50B269D097E008F9552 /* Extension+UIView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				BC9AD4DC26968D8D00A4CBFE /* FavoriteModel.swift in Sources */,
 				BC9AD4CF2696865F00A4CBFE /* ServiceLocalRepository.swift in Sources */,
 				BC30F5B326965CDE0021B196 /* FavoriteScreen.swift in Sources */,
+				BCB8D50C269D097F008F9552 /* Extension+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
