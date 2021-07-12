@@ -10,7 +10,9 @@ import Foundation
 class NetworkRepository: ServiceRepository {
 	
 	func fetchMovies(completion: @escaping (Result<Movie, MovieError>) -> Void) {
-		guard let url = URL(string: "https://api.themoviedb.org/3/trending/movie/week?api_key=f0ca6496aecedd1cfc6487c0d9849760")
+		
+		guard let serverUrl = Bundle.main.object(forInfoDictionaryKey: "ServerUrlTrending") as? String,
+				let url = URL(string: serverUrl)
 		else { return completion(.failure(.badURL)) }
 		
 		let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -30,8 +32,9 @@ class NetworkRepository: ServiceRepository {
 	}
 	
 	func fetchGenres(completion: @escaping (Result<Genres, MovieError>) -> Void) {
-		guard let url = URL(string: "https://api.themoviedb.org/3/genre/movie/list?api_key=f0ca6496aecedd1cfc6487c0d9849760&language=en-US")
-		else { return completion(.failure(.badURL)) }
+		
+		guard let serverUrlGenre = Bundle.main.object(forInfoDictionaryKey: "ServerUrlGenre") as? String,
+				let url = URL(string: serverUrlGenre) else { return completion(.failure(.badURL)) }  
 		
 		let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
 			guard let data = data, error == nil else { return completion(.failure(.requestFailed)) }

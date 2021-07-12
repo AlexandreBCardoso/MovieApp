@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ServerUrlTrending</key>
+	<string>$(SERVER_URL_TRENDING)</string>
+	<key>ServerUrlGenre</key>
+	<string>$(SERVER_URL_GENRE)</string>
 </dict>
 </plist>
