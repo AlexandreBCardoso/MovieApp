@@ -45,6 +45,9 @@
 		BC9AD4DC26968D8D00A4CBFE /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AD4DB26968D8D00A4CBFE /* FavoriteModel.swift */; };
 		BCB8D50C269D097F008F9552 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB8D50B269D097E008F9552 /* Extension+UIView.swift */; };
 		BCB8D511269D15B2008F9552 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB8D510269D15B2008F9552 /* Constants.swift */; };
+		BCB8D517269D22F8008F9552 /* MockNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB8D516269D22F8008F9552 /* MockNetworkRepository.swift */; };
+		BCEFCEBF269E4A1E00F1804A /* ViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEFCEBE269E4A1E00F1804A /* ViewMock.swift */; };
+		BCEFCECC269E4C5E00F1804A /* CodeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEFCECB269E4C5E00F1804A /* CodeViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,9 @@
 		BC9AD4DB26968D8D00A4CBFE /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
 		BCB8D50B269D097E008F9552 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		BCB8D510269D15B2008F9552 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BCB8D516269D22F8008F9552 /* MockNetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkRepository.swift; sourceTree = "<group>"; };
+		BCEFCEBE269E4A1E00F1804A /* ViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMock.swift; sourceTree = "<group>"; };
+		BCEFCECB269E4C5E00F1804A /* CodeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewTests.swift; sourceTree = "<group>"; };
 		D830F1537343E6037B2F5CAC /* Pods-MovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MovieAppTests/Pods-MovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDE7CABAE3B8EA5CA1AD30D4 /* Pods_MovieAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -293,10 +299,9 @@
 		BC87E337268BD463005A6A19 /* MovieAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				BC39F064269B4A6B00443D38 /* MovieCellTest.swift */,
-				BC39F06C269B842700443D38 /* DetailMovieScreenTests.swift */,
-				BC39F077269B89F200443D38 /* FavoriteCellTests.swift */,
-				BC39F07F269B8D9600443D38 /* NotFoundCellTests.swift */,
+				BCB8D515269D22D6008F9552 /* Mocks */,
+				BCEFCED0269E4C7100F1804A /* ScreenTests */,
+				BCEFCECB269E4C5E00F1804A /* CodeViewTests.swift */,
 				BC87E33A268BD463005A6A19 /* Info.plist */,
 			);
 			path = MovieAppTests;
@@ -309,6 +314,26 @@
 				BC87E345268BD463005A6A19 /* Info.plist */,
 			);
 			path = MovieAppUITests;
+			sourceTree = "<group>";
+		};
+		BCB8D515269D22D6008F9552 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BCB8D516269D22F8008F9552 /* MockNetworkRepository.swift */,
+				BCEFCEBE269E4A1E00F1804A /* ViewMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BCEFCED0269E4C7100F1804A /* ScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC39F064269B4A6B00443D38 /* MovieCellTest.swift */,
+				BC39F06C269B842700443D38 /* DetailMovieScreenTests.swift */,
+				BC39F077269B89F200443D38 /* FavoriteCellTests.swift */,
+				BC39F07F269B8D9600443D38 /* NotFoundCellTests.swift */,
+			);
+			path = ScreenTests;
 			sourceTree = "<group>";
 		};
 		E65654643EF246956A109255 /* Frameworks */ = {
@@ -577,8 +602,11 @@
 			files = (
 				BC39F065269B4A6B00443D38 /* MovieCellTest.swift in Sources */,
 				BC39F078269B89F200443D38 /* FavoriteCellTests.swift in Sources */,
+				BCEFCECC269E4C5E00F1804A /* CodeViewTests.swift in Sources */,
 				BC39F080269B8D9600443D38 /* NotFoundCellTests.swift in Sources */,
 				BC39F06D269B842700443D38 /* DetailMovieScreenTests.swift in Sources */,
+				BCEFCEBF269E4A1E00F1804A /* ViewMock.swift in Sources */,
+				BCB8D517269D22F8008F9552 /* MockNetworkRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
