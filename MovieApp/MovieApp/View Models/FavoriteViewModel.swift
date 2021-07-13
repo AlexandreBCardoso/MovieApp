@@ -33,10 +33,10 @@ class FavoriteViewModel {
 		if let listObject = serviceLocal.fetchFavorite() {
 			self.listFavorite.removeAll()
 			let result = listObject.compactMap{
-				FavoriteModel(pathImage: ($0.value(forKeyPath: "pathImage") as? String) ?? "",
-								  original_title: ($0.value(forKeyPath: "title") as? String) ?? "",
-								  year_release: ($0.value(forKeyPath: "year") as? String) ?? "",
-								  overview: ($0.value(forKeyPath: "overview") as? String) ?? "")
+				FavoriteModel(pathImage: ($0.value(forKeyPath: FieldsCoreData.pathImage) as? String) ?? "",
+								  original_title: ($0.value(forKeyPath: FieldsCoreData.title) as? String) ?? "",
+								  year_release: ($0.value(forKeyPath: FieldsCoreData.year) as? String) ?? "",
+								  overview: ($0.value(forKeyPath: FieldsCoreData.overview) as? String) ?? "")
 			}
 			self.listFavorite = result
 		}

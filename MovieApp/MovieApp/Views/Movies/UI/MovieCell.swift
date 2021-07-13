@@ -15,7 +15,7 @@ final class MovieCell: UICollectionViewCell {
 	// MARK: - Element UI
 	lazy var viewCell: UIView = {
 		let view = UIView.usingAutoLayout()
-		view.backgroundColor = UIColor(named: "backColor")
+		view.backgroundColor = UIColor(named: ColorName.backgroundColor)
 		return view
 	}()
 	
@@ -30,7 +30,7 @@ final class MovieCell: UICollectionViewCell {
 	lazy var titleLabel: UILabel = {
 		let label = UILabel.usingAutoLayout()
 		label.numberOfLines = 1
-		label.textColor = UIColor(named: "secondColor")
+		label.textColor = UIColor(named: ColorName.second)
 		label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
 		label.textAlignment = .center
 		label.adjustsFontSizeToFitWidth = true

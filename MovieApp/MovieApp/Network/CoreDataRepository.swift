@@ -41,10 +41,10 @@ class CoreDataRepository: ServiceLocalRepository {
 		else { return }
 		
 		let newFavorite = NSManagedObject(entity: entity, insertInto: managedContext)
-		newFavorite.setValue(viewModel.pathImage, forKeyPath: "pathImage")
-		newFavorite.setValue(viewModel.original_title, forKeyPath: "title")
-		newFavorite.setValue(viewModel.year_release, forKeyPath: "year")
-		newFavorite.setValue(viewModel.overview, forKeyPath: "overview")
+		newFavorite.setValue(viewModel.pathImage, forKeyPath: FieldsCoreData.pathImage)
+		newFavorite.setValue(viewModel.original_title, forKeyPath: FieldsCoreData.title)
+		newFavorite.setValue(viewModel.year_release, forKeyPath: FieldsCoreData.year)
+		newFavorite.setValue(viewModel.overview, forKeyPath: FieldsCoreData.overview)
 		
 		do {
 			try managedContext.save()
@@ -57,7 +57,7 @@ class CoreDataRepository: ServiceLocalRepository {
 	func deleteFavorite(title: String) {
 		let managedContext = persistentContainer.viewContext
 		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "FavoriteData")
-		fetchRequest.predicate = NSPredicate(format: "title == %@", title)
+		fetchRequest.predicate = NSPredicate(format: "\(FieldsCoreData.title) == %@", title)
 		
 		do {
 			let result = try managedContext.fetch(fetchRequest)

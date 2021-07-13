@@ -11,7 +11,7 @@ class NetworkRepository: ServiceRepository {
 	
 	func fetchMovies(completion: @escaping (Result<Movie, MovieError>) -> Void) {
 		
-		guard let serverUrl = Bundle.main.object(forInfoDictionaryKey: "ServerUrlTrending") as? String,
+		guard let serverUrl = Bundle.main.object(forInfoDictionaryKey: ServerURL.trending) as? String,
 				let url = URL(string: serverUrl)
 		else { return completion(.failure(.badURL)) }
 		
@@ -33,7 +33,7 @@ class NetworkRepository: ServiceRepository {
 	
 	func fetchGenres(completion: @escaping (Result<Genres, MovieError>) -> Void) {
 		
-		guard let serverUrlGenre = Bundle.main.object(forInfoDictionaryKey: "ServerUrlGenre") as? String,
+		guard let serverUrlGenre = Bundle.main.object(forInfoDictionaryKey: ServerURL.genre) as? String,
 				let url = URL(string: serverUrlGenre) else { return completion(.failure(.badURL)) }  
 		
 		let task = URLSession.shared.dataTask(with: url) { (data, response, error) in

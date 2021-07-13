@@ -20,7 +20,7 @@ class NotFoundCell: UITableViewCell {
 	
 	lazy var errorImageView: UIImageView = {
 		let imageView = UIImageView.usingAutoLayout()
-		imageView.image = UIImage(named: "error")
+		imageView.image = UIImage(named: IconName.error)
 		return imageView
 	}()
 	
@@ -30,7 +30,7 @@ class NotFoundCell: UITableViewCell {
 		label.text = "Nenhum filme favoritado!"
 		label.textAlignment = .center
 		label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
-		label.textColor = UIColor(named: "backColor")
+		label.textColor = UIColor(named: ColorName.backgroundColor)
 		return label
 	}()
 	

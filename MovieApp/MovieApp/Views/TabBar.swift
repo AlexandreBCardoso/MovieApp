@@ -25,8 +25,8 @@ class TabBar: UITabBarController {
 	}
 	
 	private func setupViewControllers() {
-		guard let imageFavorite = UIImage(named: "favorite_empty_icon"),
-				let imageMovies = UIImage(named: "list_icon") else { return  }
+		guard let imageFavorite = UIImage(named: IconName.favoriteTabBar),
+				let imageMovies = UIImage(named: IconName.moviesTabBar) else { return  }
 		
 		viewControllers = [
 			createNavController(for: MoviesViewController(),
@@ -45,8 +45,8 @@ class TabBar: UITabBarController {
 		let navController = UINavigationController(rootViewController: rootViewController)
 		navController.tabBarItem.title = title
 		navController.tabBarItem.image = image
-		navController.navigationBar.tintColor = UIColor(named: "backColor")
-		navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: "backColor") ?? UIColor.black]
+		navController.navigationBar.tintColor = UIColor(named: ColorName.backgroundColor)
+		navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(named: ColorName.backgroundColor) ?? UIColor.black]
 		rootViewController.navigationItem.title = title
 		return navController
 	}

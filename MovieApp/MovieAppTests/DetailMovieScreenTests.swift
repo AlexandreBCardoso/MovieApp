@@ -51,11 +51,7 @@ extension DetailMovieScreenTests {
 	
 	func createVM(favorite: Bool) -> DetailMovieViewModel {
 		var icon: String
-		if favorite {
-			icon = "favorite_full_icon"
-		} else {
-			icon = "favorite_gray_icon"
-		}
+		icon = favorite ? IconName.favorite : IconName.unfavorite
 		let detail = DetailMovieViewModel(poster_path: "", pathImage: "", original_title: "Thor",
 													 iconFavorite: icon, favorite: favorite, release_date: "2021-09-10",
 													 genre_ids: [28,12,16], overview: "Natasha Romanoff, also known as Black Widow, confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.")

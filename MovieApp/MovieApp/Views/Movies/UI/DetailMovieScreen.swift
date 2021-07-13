@@ -74,7 +74,7 @@ final class DetailMovieScreen: UIView {
 	
 	// MARK: - Function
 	@objc func changeFavorite(_ sender: UIButton) {
-		let iconFavorite: String = !favorite ? "favorite_full_icon" : "favorite_gray_icon"
+		let iconFavorite: String = !favorite ? IconName.favorite : IconName.unfavorite
 		self.favoriteButtom.setImage(UIImage(named: iconFavorite), for: .normal)
 		self.favorite = !favorite
 		self.delegate?.updateFavorite(favorite: favorite)

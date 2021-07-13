@@ -30,7 +30,7 @@ final class FavoriteCell: UITableViewCell {
 	lazy var titleLabel: UILabel = {
 		let label = UILabel.usingAutoLayout()
 		label.font = UIFont.systemFont(ofSize: 17, weight: .bold)
-		label.textColor = UIColor(named: "backColor")
+		label.textColor = UIColor(named: ColorName.backgroundColor)
 		label.adjustsFontSizeToFitWidth = true
 		return label
 	}()
@@ -38,7 +38,7 @@ final class FavoriteCell: UITableViewCell {
 	lazy var yearLabel: UILabel = {
 		let label = UILabel.usingAutoLayout()
 		label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-		label.textColor = UIColor(named: "backColor")
+		label.textColor = UIColor(named: ColorName.backgroundColor)
 		return label
 	}()
 	
@@ -46,7 +46,7 @@ final class FavoriteCell: UITableViewCell {
 		let label = UILabel.usingAutoLayout()
 		label.numberOfLines = 0
 		label.font = UIFont.systemFont(ofSize: 15, weight: .light)
-		label.textColor = UIColor(named: "backColor")
+		label.textColor = UIColor(named: ColorName.backgroundColor)
 		return label
 	}()
 	

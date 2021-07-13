@@ -13,7 +13,7 @@ struct MovieCellViewModel {
 	
 	var favorite: Bool
 	var iconFavorite: String {
-		return favorite ? "favorite_full_icon" : "favorite_gray_icon"
+		return favorite ? IconName.favorite : IconName.unfavorite
 	}
 	var pathImage: String {
 		return "https://image.tmdb.org/t/p/w200\(poster_path)"
