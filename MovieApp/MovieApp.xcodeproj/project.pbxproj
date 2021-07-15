@@ -32,6 +32,7 @@
 		BC63501A269F93C500D955C1 /* genre.json in Resources */ = {isa = PBXBuildFile; fileRef = BC635019269F93C500D955C1 /* genre.json */; };
 		BC635022269F9E3500D955C1 /* MovieViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC635021269F9E3500D955C1 /* MovieViewModelTests.swift */; };
 		BC635031269FABE500D955C1 /* MovieCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC635030269FABE500D955C1 /* MovieCellViewModelTests.swift */; };
+		BC63503C269FB56200D955C1 /* DetailMovieViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC63503B269FB56200D955C1 /* DetailMovieViewModelTests.swift */; };
 		BC7A7C962692177B00971AD7 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A7C952692177B00971AD7 /* MovieCellViewModel.swift */; };
 		BC7A7CB526921A4300971AD7 /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A7CB426921A4300971AD7 /* DetailMovieViewController.swift */; };
 		BC7A7CBD26921ADA00971AD7 /* DetailMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A7CBC26921ADA00971AD7 /* DetailMovieScreen.swift */; };
@@ -102,6 +103,7 @@
 		BC635019269F93C500D955C1 /* genre.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = genre.json; sourceTree = "<group>"; };
 		BC635021269F9E3500D955C1 /* MovieViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModelTests.swift; sourceTree = "<group>"; };
 		BC635030269FABE500D955C1 /* MovieCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModelTests.swift; sourceTree = "<group>"; };
+		BC63503B269FB56200D955C1 /* DetailMovieViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModelTests.swift; sourceTree = "<group>"; };
 		BC7A7C952692177B00971AD7 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
 		BC7A7CB426921A4300971AD7 /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		BC7A7CBC26921ADA00971AD7 /* DetailMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieScreen.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				BCEFCECB269E4C5E00F1804A /* CodeViewTests.swift */,
 				BC635021269F9E3500D955C1 /* MovieViewModelTests.swift */,
 				BC635030269FABE500D955C1 /* MovieCellViewModelTests.swift */,
+				BC63503B269FB56200D955C1 /* DetailMovieViewModelTests.swift */,
 				BC87E33A268BD463005A6A19 /* Info.plist */,
 			);
 			path = MovieAppTests;
@@ -620,6 +623,7 @@
 				BC39F065269B4A6B00443D38 /* MovieCellTest.swift in Sources */,
 				BC39F078269B89F200443D38 /* FavoriteCellTests.swift in Sources */,
 				BCEFCECC269E4C5E00F1804A /* CodeViewTests.swift in Sources */,
+				BC63503C269FB56200D955C1 /* DetailMovieViewModelTests.swift in Sources */,
 				BC39F080269B8D9600443D38 /* NotFoundCellTests.swift in Sources */,
 				BCEFCED5269E4FB200F1804A /* CoreDataRepositoryMock.swift in Sources */,
 				BC39F06D269B842700443D38 /* DetailMovieScreenTests.swift in Sources */,

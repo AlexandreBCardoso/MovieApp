@@ -34,8 +34,23 @@ struct DetailMovieViewModel {
 		}
 	}
 	
-	private let service: ServiceRepository = NetworkRepository()
+	private let service: ServiceRepository
 	weak var delegate: DetailMovieViewModelDelegate?
+	
+	
+	// MARK: - Initialize
+	init(service: ServiceRepository = NetworkRepository(), poster_path: String, pathImage: String, original_title: String,
+		  iconFavorite: String, favorite: Bool, release_date: String, genre_ids: [Int], overview: String) {
+		self.service = service
+		self.poster_path = poster_path
+		self.pathImage = pathImage
+		self.original_title = original_title
+		self.iconFavorite = iconFavorite
+		self.favorite = favorite
+		self.release_date = release_date
+		self.genre_ids = genre_ids
+		self.overview = overview
+	}
 	
 	// MARK: - Function
 	func fetchGenres() {
