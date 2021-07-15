@@ -14,7 +14,7 @@ class MovieViewModelTests: QuickSpec {
 	override func spec() {
 		describe("MovieViewModel") {
 			
-			context("FetchMovie") {
+			context("Fetch Movie") {
 				it("Teste de Sucesso") {
 					let viewModel = MovieViewModel(service: NetworkRepositoryMock(typeTest: 0))
 					viewModel.fetchMovie()
@@ -45,33 +45,72 @@ class MovieViewModelTests: QuickSpec {
 				
 			}
 			
-			context("Busca Item Movie") {
-				
-				it("Valida preenchimendo de titulo") {
-					let viewModel = MovieViewModel(service: NetworkRepositoryMock(typeTest: 0))
+			context("Fetch Favorite") {
+				it("Favorite vazio") {
+					let viewModel = MovieViewModel(service: NetworkRepositoryMock(typeTest: 0), serviceLocal: CoreDataRepositoryMock())
 					viewModel.fetchMovie()
+					viewModel.fetchFavorite()
 					
-					let indexPath = IndexPath(row: 0, section: 0)
-					let movieItem = viewModel.getItemMovie(indexPath: indexPath)
+					let count = viewModel.numberOfMovies
 					
-					expect(movieItem.original_title) != ""
+					for index in 0..<count {
+						let indexPath = IndexPath(row: index, section: 0)
+						let result = viewModel.getItemMovie(indexPath: indexPath)
+						
+						let expected = viewModel.checkFavorite(title: result.original_title)
+						
+						expect(expected).to(beFalse())
+					}
 				}
 				
-			}
-			
-			context("Check Favorite Movie") {
-				it("") {
-					let viewModel = MovieViewModel(service: NetworkRepositoryMock(typeTest: 0))
+				it("Salva Movie Favorito") {
+					let viewModel = MovieViewModel(service: NetworkRepositoryMock(typeTest: 0),
+															 serviceLocal: CoreDataRepositoryMock())
 					viewModel.fetchMovie()
-					
 					let indexPath = IndexPath(row: 0, section: 0)
 					let movieItem = viewModel.getItemMovie(indexPath: indexPath)
 					
 					expect(viewModel.checkFavorite(title: movieItem.original_title)).to(beFalse())
+					
+					viewModel.saveFavorite(detailMovie: self.createDetailMovie(item: movieItem))
+					viewModel.fetchFavorite()
+					
+					expect(viewModel.checkFavorite(title: movieItem.original_title)).to(beTrue())
 				}
+				
+				it("Deleta Movie Favorito") {
+					let viewModel = MovieViewModel(service: NetworkRepositoryMock(typeTest: 0),
+															 serviceLocal: CoreDataRepositoryMock())
+					viewModel.fetchMovie()
+					let indexPath = IndexPath(row: 0, section: 0)
+					let movieItem = viewModel.getItemMovie(indexPath: indexPath)
+					
+					expect(viewModel.checkFavorite(title: movieItem.original_title)).to(beFalse())
+					
+					viewModel.saveFavorite(detailMovie: self.createDetailMovie(item: movieItem))
+					viewModel.fetchFavorite()
+					expect(viewModel.checkFavorite(title: movieItem.original_title)).to(beTrue())
+					
+					viewModel.deleteFavorite(detailMovie: self.createDetailMovie(item: movieItem))
+					viewModel.fetchFavorite()
+					expect(viewModel.checkFavorite(title: movieItem.original_title)).to(beFalse())
+				}
+				
 			}
 			
 		}
+	}
+	
+}
+
+
+extension MovieViewModelTests {
+	
+	func createDetailMovie(item: MovieResult) -> DetailMovieViewModel {
+		let detail = DetailMovieViewModel(poster_path: item.poster_path, pathImage: "",
+													 original_title: item.original_title, iconFavorite: "", favorite: false, release_date: item.release_date,
+													 genre_ids: item.genre_ids, overview: item.overview)
+		return detail
 	}
 	
 }
