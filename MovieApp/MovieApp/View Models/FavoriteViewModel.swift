@@ -6,11 +6,10 @@
 //
 
 import Foundation
-//import CoreData
 
 class FavoriteViewModel {
 	
-	var listFavorite: [FavoriteModel] = []
+	private var listFavorite: [FavoriteModel] = []
 	
 	var numberOfFavorites: Int {
 		if listFavorite.isEmpty {
